@@ -1,0 +1,10 @@
+#https://docs.aws.amazon.com/ja_jp/codedeploy/latest/userguide/reference-appspec-file.html
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo:
+          ContainerName: <CONTAINER_NAME>
+          ContainerPort: 3000

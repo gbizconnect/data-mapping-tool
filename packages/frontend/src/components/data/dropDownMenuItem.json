@@ -1,0 +1,34 @@
+[
+  {
+    "jsonFile": "基本情報",
+    "filePath": "./data/basic.json"
+  },
+  {
+    "jsonFile": "申請情報",
+    "filePath": "./data/application.json"
+  },
+  {
+    "jsonFile": "財務情報",
+    "filePath": "./data/finance.json"
+  },
+  {
+    "jsonFile": "役員一覧",
+    "filePath": "./data/officerList.json"
+  },
+  {
+    "jsonFile": "主要株主",
+    "filePath": "./data/shareholderList.json"
+  },
+  {
+    "jsonFile": "事業所一覧",
+    "filePath": "./data/officeList.json"
+  },
+  {
+    "jsonFile": "証明書情報",
+    "filePath": "./data/certificate.json"
+  },
+  {
+    "jsonFile": "資格保有者一覧",
+    "filePath": "./data/professions.json"
+  }
+]

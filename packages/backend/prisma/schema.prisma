@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./mapping.db"
+}
+
+model DataMapping {
+  id                  String @id @default(uuid())
+  account_master_id   String? @map("account_master_id")
+  edges               String
+  file_name           String @map("file_name")
+  nodes               String
+  register_time       DateTime @updatedAt @map("register_time")
+  update_time         DateTime @updatedAt @map("update_time")
+  version             Int
+}

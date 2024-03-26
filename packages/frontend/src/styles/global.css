@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  :host {
+    font-family: ui-sans-serif, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans JP";
+  }
+}
+
+#srcwrapper::-webkit-scrollbar,
+#dstwrapper::-webkit-scrollbar,
+.functionSrcWrapper::-webkit-scrollbar,
+.functionDstWrapper::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background-color: var(white);
+}
+#srcwrapper::-webkit-scrollbar-track,
+#dstwrapper::-webkit-scrollbar-track,
+.functionSrcWrapper::-webkit-scrollbar-track,
+.functionDstWrapper::-webkit-scrollbar-track {
+  width: 10px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--black-a1);
+}
+#srcwrapper::-webkit-scrollbar-track:hover,
+#dstwrapper::-webkit-scrollbar-track:hover,
+.functionSrcWrapper::-webkit-scrollbar-track:hover,
+.functionDstWrapper::-webkit-scrollbar-track:hover {
+  background-color: var(white);
+}
+#srcwrapper::-webkit-scrollbar-thumb,
+#dstwrapper::-webkit-scrollbar-thumb,
+.functionSrcWrapper::-webkit-scrollbar-thumb,
+.functionDstWrapper::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 6px rgba(59, 57, 57, 0.3);
+  background-color: rgb(139, 139, 139)
+}

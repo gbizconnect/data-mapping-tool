@@ -1,0 +1,60 @@
+[{
+  "name": "order_id",
+  "parent": ""
+}, {
+  "name": "order_created_at",
+  "parent": ""
+}, {
+  "name": "order_updated_at",
+  "parent": ""
+}, {
+  "name": "orderedproducts",
+  "parent": ""
+  }, {
+  "name": "users",
+  "parent": "users",
+  "items": [{
+    "name": "user_id",
+    "parent": "users"
+  }, {
+    "name": "user_first_name",
+    "parent": "users"
+  }, {
+    "name": "user_last_name",
+    "parent": "users"
+  }, {
+    "name": "user_email",
+    "parent": "users"
+  }, {
+    "name": "user_created_at",
+    "parent": "users"
+  }, {
+    "name": "user_updated_at",
+    "parent": "users"
+  }, {
+    "name": "addresses",
+    "parent": "addresses",
+    "items": [{
+      "name": "address_id",
+      "parent": "addresses"
+    }, {
+      "name": "address_type",
+      "parent": "addresses"
+    }, {
+      "name": "address_city",
+      "parent": "addresses"
+    }, {
+      "name": "address_street",
+      "parent": "addresses"
+    }, {
+      "name": "address_number",
+      "parent": "addresses"
+    }, {
+      "name": "address_is_shipping",
+      "parent": "addresses"
+    }, {
+      "name": "address_is_billing",
+      "parent": "addresses"
+    }]
+  }]
+}]
