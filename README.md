@@ -39,18 +39,18 @@ sudo yum install nodejs
 ```
 ##### yarnのインストール
 ```Shell
-npm install -g yarn
+sudo npm install -g yarn
 ```
 
 #### 2.1.2. Data Mapping Toolのダウンロード
 gitコマンドでgithubからData Mapping Toolのソースコードをクローンします。
 ```
-git clone https://github.com/gbizconnect/data-mapping.git
+git clone https://github.com/gbizconnect/data-mapping-tool.git
 ```
 
 #### 2.1.3. 依存ライブラリのインストール
 ```Shell
-cd data-mapping
+cd data-mapping-tool
 yarn install
 ```
 prismaのインストールと初期化
@@ -83,18 +83,18 @@ sudo apt-get install nodejs
 
 ##### yarnのインストール
 ```Shell
-npm install -g yarn
+sudo npm install -g yarn
 ```
 
 #### 2.2.2. Data Mapping Toolのダウンロード
 gitコマンドでgithubからData Mapping Toolのソースコードをクローンします。
 ```
-git clone https://github.com/gbizconnect/data-mapping.git
+git clone https://github.com/gbizconnect/data-mapping-tool.git
 ```
 
 #### 2.2.3. 依存ライブラリのインストール
 ```Shell
-cd data-mapping
+cd data-mapping-tool
 yarn install
 ```
 
@@ -128,18 +128,18 @@ sudo apt-get install nodejs npm
 
 ##### yarnのインストール
 ```Shell
-npm install -g yarn
+sudo npm install -g yarn
 ```
 
 #### 2.3.2. Data Mapping Toolのダウンロード
 gitコマンドでgithubからData Mapping Toolのソースコードをクローンします。
 ```
-git clone https://github.com/gbizconnect/data-mapping.git
+git clone https://github.com/gbizconnect/data-mapping-tool.git
 ```
 
 #### 2.3.3. 依存ライブラリのインストール
 ```Shell
-cd data-mapping
+cd data-mapping-tool
 yarn install
 ```
 
@@ -173,18 +173,18 @@ http://localhost:3000/ にアクセスしてください。
 ##### yarnのインストール
 コマンドプロンプトから以下を実行しyarnをインストールしてください。
 ```Shell
-npm install -g yarn
+sudo npm install -g yarn
 ```
 
 #### 2.4.2. Data Mapping Toolのダウンロード
 gitコマンドでgithubからData Mapping Toolのソースコードをクローンします。
 ```Shell
-git clone https://github.com/gbizconnect/data-mapping.git
+git clone https://github.com/gbizconnect/data-mapping-tool.git
 ```
 
 #### 2.4.3. 依存ライブラリのインストール
 ```Shell
-cd data-mapping
+cd data-mapping-tool
 yarn install
 ```
 
@@ -278,11 +278,13 @@ Data Mapping Toolでは以下のライブラリを使用しています。
 }
 ```
 
-2. 選択したJSONファイルのキーが反映された変換元データのオブジェクトがキャンバス上に追加されます。
+2. キャンバス上にある「変換元」＞「JSONファイルを選択」ボタンを押下し、前項で作成したファイルを選択します。
 
-3. キャンバス上にある「変換先」＞「法人標準データ」ボタンを押下し、任意の法人標準データを選択します。
+3. 選択したJSONファイルのキーが反映された変換元データのオブジェクトがキャンバス上に追加されます。
 
-4. 選択した法人標準データの変換先データのオブジェクトがキャンバス上に追加されます。
+4. キャンバス上にある「変換先」＞「法人標準データ」ボタンを押下し、任意の法人標準データを選択します。
+
+5. 選択した法人標準データの変換先データのオブジェクトがキャンバス上に追加されます。
 
 ### 3.2. マッピング
 
@@ -298,7 +300,7 @@ Data Mapping Toolでは以下のライブラリを使用しています。
 
 1. キャンバス上にある「関数」ボタンを押下すると、m個の変換元データ項目を変換・分割・結合してn個の変換先データ項目にマッピングすることを実現する関数を作成することができます。
 
-2. 関数編集ダイアログの「関数ロジック」にJavaScript(ECMAScript 5.1)を用いて関数を定義します。例は「[関数ロジックのサンプル](#関数ロジックのサンプル)」を参照してください。
+2. 関数編集ダイアログの「関数ロジック」にJavaScript(ECMAScript 5.1)を用いて関数を定義します。例は後述の「4. 関数ロジックのサンプル」を参照してください。
 また、「変換元データ項目」「変換先データ項目」で関数を適用するデータ項目数を設定してください。
 
 3. 関数編集ダイアログの「適用」ボタンを押下すると、入力内容が反映された関数のオブジェクトがキャンバス上に追加されます。
@@ -412,17 +414,17 @@ dst[1] = src.join("-").substr(3,5);
 
 本GUIツール（以下、「本ツール」という）はREST APIのレスポンス等、JSONのデータを異なる任意のJSONのデータにGUIでマッピンし、変換ロジックおよび、マッピングルールの提供を目的としています。本ツールの利用にあたっては、以下の免責事項をご確認ください。
 
-1. 使用条件
+1. 使用条件<br>
 本ツールは、「現状有姿」で提供され、明示的または暗黙的な保証は伴いません。これには、商品性、特定目的への適合性、及び非侵害保証が含まれますが、これに限定されません。本ツールの使用はユーザーの自己責任であり、提供される機能を使用して行われるすべてのデータ操作およびその結果に対して、我々は責任を負いません。
 
-2. データと通信
+2. データと通信<br>
 本ツールを使用することで行われるデータマッピングおよびデータ変換の正確性、効率性、適用性については、保証されません。外部APIから取得または送信されるデータのセキュリティ、プライバシー、完全性に対する責任は、ユーザーが負うものとします。
 
-3. 第三者のサービス
+3. 第三者のサービス<br>
 本ツールは、外部のREST APIや他の第三者サービスとのインターフェースを提供するものですが、これらのサービスの可用性、信頼性、または適用性について責任を負いません。外部サービスの利用規約、プライバシーポリシー、および利用条件は、それぞれのサービス提供者によって定められます。
 
-4. 免責
+4. 免責<br>
 本ツールの使用または使用不能から生じる直接的、間接的、偶発的、特別、懲罰的、またはその他の損害（利益の損失、データの損失、業務の中断を含むがこれに限定されない）について、我々はいかなる責任も負わないものとします。
 
-5. 改訂
+5. 改訂<br>
 本免責事項は予告なしに改訂される場合があります。本ツールを使用することで、ユーザーは本免責事項の最新版に同意したことになります。
